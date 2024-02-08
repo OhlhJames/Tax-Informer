@@ -1,19 +1,17 @@
 # Tax-Informer
-##
-#
+
 
 ## ScreenShot 
 
 
 ## Usage 
-This is designed to return tax informtion by iput. the current input we take is urls. The urls are 
-stripped down to remove URI's and we're leveraging the api-ninja api . 
+Use this website to look up tax information about various URLs! We use the URL Look up API to use URLs as an input source and the Sales Tax API to provide sales tax information as the output source!
 
 
 ## Credits
 Draggables Markers API-  
 
- https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-draggable
+https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-draggable
 
 Reverse Geocoding API-
 
@@ -23,6 +21,9 @@ Sales Tax API-
 
 https://api-ninjas.com/api/salestax
 
+URL Lookup API-
+
+https://api-ninjas.com/api/urllookup
 
 GitHub from previous trial of project-
 
