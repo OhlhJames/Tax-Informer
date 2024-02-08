@@ -2,6 +2,8 @@
 var urlName = document.querySelector('#search-url');
 var zipcode = document.querySelector('#zip-code'); 
 var searchButton = document.querySelector('#search-button');
+var returnTax = document.querySelector('#return-tax');
+var returnZip = document.querySelector('#return-zip')
 
 var grabTax = function(event){
     event.preventDefault();
@@ -18,7 +20,7 @@ var grabTax = function(event){
         .then(function (data) {
             console.log(data)
             companyZip = data.zip;
-            console.log(companyZip)
+            returnZip.textContent = companyZip;
             if(companyZip != ""){ 
                 fetch('https://api.api-ninjas.com/v1/salestax?zip_code=' + companyZip, {
                     method: 'GET',
@@ -32,10 +34,10 @@ var grabTax = function(event){
                     .then(function (data2) {
                     console.log(data2)
                     totalTaxRate = data2[0].total_rate;
-                    console.log(totalTaxRate);
+                    returnTax.textContent = totalTaxRate;
                 });
             }else{
-                console.log("error finding zip code, redacted for privacy")
+                returnTax.textContent = "error finding zip code, redacted for privacy"
             }
         });
 }
