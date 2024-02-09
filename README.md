@@ -3,7 +3,7 @@
 
 ## Description
 
-This website uses the URL Lookup and Sales Tax API's to provide the user with sales tax information about whatever URL the user searches. When the user searches a valid URL, the URL Lookup API returns the location information of the domain name. We take the zipcode given by the URL Lookup API and feed it into the Sales Tax API. The Sales Tax API then takes the zipcode we provide and returns the breakdown of the sales tax. the domain name, zipcode, and sales tax information will be displayed on our salex tax table. the user can also search by zipcode directly to view the sales tax breakdown. Our website uses Tailwinds CSS for the search bar, dark mode toggle, and table.
+This website uses the URL Lookup and Sales Tax API's to provide the user with sales tax information about whatever URL the user searches. When the user searches a valid URL, the URL Lookup API returns the location information of the domain name. We take the zipcode given by the URL Lookup API and feed it into the Sales Tax API. The Sales Tax API then takes the zipcode we provide and returns the breakdown of the sales tax. the domain name, zipcode, and sales tax information will be displayed on our salex tax table. the user can also search by zipcode directly to view the sales tax breakdown. Our website uses Tailwinds CSS for the search bar, dark mode toggle, and table. We use client-side storage to store the users persistent data in the table.
 
 ## ScreenShot 
 
