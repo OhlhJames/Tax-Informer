@@ -23,9 +23,8 @@ var grabTax = function (event) {
             companyZip = data.zip;
             tableRoot.children[0].textContent = urlName.value;
             tableRoot.children[1].textContent = companyZip;
-            localStorage.setItem('Company Zip ' , companyZip)
-            localStorage.setItem('URL ' , urlName)
-            returnZip.textContent = companyZip;
+            localStorage.setItem('Company Zip ', companyZip)
+            localStorage.setItem('URL ', urlName)
             if (companyZip != "") {
                 fetch('https://api.api-ninjas.com/v1/salestax?zip_code=' + companyZip, {
                     method: 'GET',
@@ -39,7 +38,7 @@ var grabTax = function (event) {
                     .then(function (data2) {
                         console.log(data2)
                         totalTaxRate = data2[0].total_rate;
-                        returnTax.textContent = totalTaxRate;
+                        tableRoot.children[2].textContent = totalTaxRate;
                     });
             } else {
                 returnTax.textContent = "error finding zip code, redacted for privacy"
