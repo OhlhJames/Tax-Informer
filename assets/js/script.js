@@ -3,7 +3,8 @@ var urlName = document.querySelector('#search-url');
 var zipcode = document.querySelector('#zip-code'); 
 var searchButton = document.querySelector('#search-button');
 var returnTax = document.querySelector('#return-tax');
-var returnZip = document.querySelector('#return-zip')
+var returnZip = document.querySelector('#return-zip');
+var tableRoot = document.querySelector('#table-root');
 
 var grabTax = function(event){
     event.preventDefault();
