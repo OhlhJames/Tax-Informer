@@ -48,23 +48,63 @@
         </nav>
 
     </header>
-    <p class="mb-3 text-gray-500 dark:text-gray-400">Welcome to Tax Informer, you can use this website to look up how
-        much different website-based companies pay in taxes, or if you wish you can also search zip codes of places you
-        wish to live/visit and see how much you would pay in taxes either living or visiting that location.</p>
-        <form>   
-            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                </div>
-                <input type="search" id="search-url" class="relative w-1/2 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="URL Name" required>
-                <button type="submit" id="search-button" class="text-white relative end-20 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+    <p class="mb-3 text-gray-500 dark:text-gray-400">Welcome to Tax Informer! Use this website to look up what different
+        website-based companies pay in taxes, or you search zip codes of places you
+        wish to live/visit and see how much you would pay in taxes in that given area!</p>
+    <form>
+        <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
             </div>
-        </form>
-    <script src="./assets/js/script.js"></script>
-
+            <input type="search" id="search-url"
+                class="relative w-1/2 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="URL Name" required>
+            <button type="submit" id="search-button"
+                class="text-white relative end-20 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+        </div>
+        <aside class="list-root">
+            <h2>List of Urls, Zipcodes, and Tax information for the Url searched</h2>
+            <h3 id="return-zip"></h3>
+            <h3 id="return-tax"></h3>
+        </aside>
+    </form>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Domain
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        City,State,Zip
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Tax
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700" id="table-root">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Domain 1
+                    </th>
+                    <td class="px-6 py-4">
+                        City,State,Zip 1
+                    </td>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Tax 1
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
@@ -86,6 +126,7 @@
             </form>
         </div>
       </section>
+   <script src="./assets/js/script.js"></script>
 </body>
 
 
