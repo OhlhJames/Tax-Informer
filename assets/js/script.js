@@ -23,6 +23,8 @@ var grabTax = function(event){
             console.log(data)
             companyZip = data.zip;
             tableRoot.children[1].textContent = companyZip; 
+            localStorage.setItem('Company Zip ' , companyZip)
+            localStorage.setItem('URL ' , urlName)
             returnZip.textContent = companyZip;
             if(companyZip != ""){ 
                 fetch('https://api.api-ninjas.com/v1/salestax?zip_code=' + companyZip, {
