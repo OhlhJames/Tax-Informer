@@ -11,10 +11,11 @@
 <body>
     <header>
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
-            <div dir ='ltr' class="flex flex-wrap justify-between mx-auto p-4">
+            <div dir='ltr' class="flex justify-between flex-wrap mx-auto p-4">
+                <div class="flex">
                 <img src="./assets/images/scale.jpg" class="max-h-[75px] object-left-top">
-                <a  class=" space-x-3 rtl:space-x-reverse">
-                    <span class=" text-2xl font-semibold whitespace-nowrap dark:text-white">Tax
+                <a class=" space-x-3 rtl:space-x-reverse">
+                    <span class="text-left text-2xl font-bold whitespace-nowrap dark:text-white mx-10">Tax
                         Informer</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
@@ -27,7 +28,8 @@
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            </div>
+                <div class="hidden w-full md:block md:w-auto self-right" id="navbar-default">
                     <ul
                         class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
@@ -63,7 +65,7 @@
                 </svg>
             </div>
             <input type="search" id="search-url"
-                class="relative w-1/2 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="relative w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="URL Name" required>
             <button type="submit" id="search-button"
                 class="text-white relative end-20 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
