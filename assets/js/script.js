@@ -5,7 +5,6 @@ var searchButton = document.querySelector('#search-button');
 var returnTax = document.querySelector('#return-tax');
 var returnZip = document.querySelector('#return-zip');
 var tableRoot = document.querySelector('#table-root');
-
 var grabTax = function(event){
     event.preventDefault();
     console.log("button click successful");
@@ -21,6 +20,7 @@ var grabTax = function(event){
         .then(function (data) {
             console.log(data)
             companyZip = data.zip;
+            tableRoot.children[1].textContent = companyZip; 
             returnZip.textContent = companyZip;
             if(companyZip != ""){ 
                 fetch('https://api.api-ninjas.com/v1/salestax?zip_code=' + companyZip, {
