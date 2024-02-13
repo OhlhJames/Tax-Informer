@@ -22,8 +22,10 @@ var grabTax = function(event){
         .then(function (data) {
             console.log(data)
             companyZip = data.zip;
-            tableRoot.children[1].textContent = companyZip;           
-            returnZip.textContent = companyZip;
+            tableRoot.children[0].textContent = urlName.value;
+            tableRoot.children[1].textContent = companyZip;
+            localStorage.setItem('Company Zip ', companyZip)
+            localStorage.setItem('URL ', urlName)       
 // if zip not empty lookup sales tax based on returned zip 
             if(companyZip != ""){ 
                 fetch('https://api.api-ninjas.com/v1/salestax?zip_code=' + companyZip, {
@@ -38,20 +40,12 @@ var grabTax = function(event){
                     .then(function (data2) {
                     console.log(data2)
                     totalTaxRate = data2[0].total_rate;
-                    returnTax.textContent = totalTaxRate;
+                    tableRoot.children[2].textContent = totalTaxRate;
                 });
             }else{
-                returnTax.textContent = "error finding zip code, redacted for privacy"
+                tableRoot.children[1].textContent = "error finding zip code, redacted for privacy";
+                tableRoot.children[2].textContent = "Null";
             }
         });
 }
 searchButton.addEventListener('click',grabTax)
-
-/* if(company.tax > .09 ){
-  company.tax.color= red
-}else if(company.tax < .071){
-  company.tax.color = green
-}else{
-  company.tax.color = yellow
-}
-'website.blahh?search=' + name+ "&tax" */
